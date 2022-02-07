@@ -17,7 +17,7 @@ getToDos(@Req() request: Request): Todo[]{
 addTodo(@Body() newTodo : Todo): Todo{let todo = new Todo();
     todo.id=uuidv4();
     todo={...todo,...newTodo}
-    this.todos.push(newTodo);
-    return newTodo
+    this.todos.push(todo);
+    return todo
 }
 }
